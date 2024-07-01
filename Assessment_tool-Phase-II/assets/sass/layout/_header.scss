@@ -1,0 +1,63 @@
+@use '../base/color' as c;
+
+header
+{
+    position:fixed;
+    top: 0;
+    z-index: 20;
+    width: 100%;
+nav
+{
+    background-color: c.$h1;
+    margin-left: 200px;
+   
+    div 
+    {
+      div 
+      {
+        ul 
+        {
+            li 
+            {
+                .drop-division
+                    {
+                        background-color: c.$h9;          
+                        .dropdown
+                        {
+                            color: c.$h2;
+                            .dropdown-toggle
+                            {
+                                color: c.$h2;
+                            }
+                            .dropdown-menu
+                            {
+                                background-color: c.$h9;
+                                min-width: 7rem;
+                            }
+                            .dropdown-item
+                            {
+                                color: c.$h2;
+                            }
+                        }
+                    }
+            }
+        }
+      }
+    }
+}
+}
+@media (max-width:850px)
+{
+    header
+    {
+        position: fixed;
+        top:0;
+        width: 100%;
+        nav 
+    {
+        margin-left: 46px;
+    }
+
+    }
+    
+}

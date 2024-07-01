@@ -1,0 +1,21 @@
+@use '../base/color'as c;
+.dropdown
+    {
+        a 
+        {
+            background-color: c.$h9;
+        }
+        color: c.$h2;
+        .dropdown-toggle
+        {
+            color: c.$h2;
+        }
+        .dropdown-menu
+        {
+            background-color: c.$h9;
+        }
+        .dropdown-item
+        {
+            color: c.$h2;
+        }
+    }

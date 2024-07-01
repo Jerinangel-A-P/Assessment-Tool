@@ -1,0 +1,19 @@
+@use '../sass/components/searchbar';
+@use  '../sass/layout/header';
+@use '../sass/layout/sidebar';
+@use '../sass/layout/body';
+@use '../sass/components/dropdown';
+@use '../sass/pages/StudentDashboard';
+@use '../sass/components/modal';
+@use '../sass/../sass/components/form';
+@use '../sass/components/table';
+@use '../sass/pages/instructor';
+@use '../sass/layout/login';
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    color:#03045E;
+}

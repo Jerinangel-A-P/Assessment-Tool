@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Student Dashboard</title>
+    <!-- style sheet link -->
+    <link rel="stylesheet" href="/assets/css/style.css"/>
+    <!-- fontawesome link -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.2/css/fontawesome.min.css"
+      integrity="sha384-BY+fdrpOd3gfeRvTSMT+VUZmA728cfF9Z2G42xpaRkUGu2i3DyzpTURDo5A6CaLK"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      hrefh="ttps://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- googlefont link -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat&family=Nunito+Sans:opsz@6..12&family=Saira&family=Tektur&display=swap"
+      rel="stylesheet"
+    />
+    <!-- bootstrap link -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+
+<style>
+  textarea:focus
+  {
+    outline: none;
+  }
+</style>
+  </head>
+  <body>
+    <!-- nav start -->
+    <nav
+      class="d-flex flex-wrap justify-content-between p-3"
+      style="background-color: #caf0f8; color: #03045e"
+    >
+      <div class="d-flex flex-wrap column-gap-3">
+        <div class="d-flex flex-wrap">
+          <p class="fw-bold align-self-center mb-0">Username :</p>
+          <p class="align-self-center mb-0">Jerinangel A P</p>
+        </div>
+        <div class="d-flex flex-wrap">
+          <p class="fw-bold align-self-center mb-0">Student Id :</p>
+          <p class="align-self-center mb-0">S101</p>
+        </div>
+      </div>
+      <div class="d-flex flex-wrap column-gap-3">
+        <div class="d-flex flex-wrap column-gap-1">
+          <img
+            class="align-self-center"
+            src="../assets/static/images/clock.png"
+            height="25"
+          />
+          <p class="align-self-center mb-0">15:30</p>
+        </div>
+        <div>
+          <button
+            class="btn" data-bs-toggle="modal" data-bs-target="#submit"
+            style="background-color: #03045e; color: whitesmoke"
+          >
+            Submit
+          </button>
+        </div>
+      </div>
+    </nav>
+
+<!-- Modal -->
+<div class="modal fade" id="submit" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5 fw-bold" id="staticBackdropLabel">Assessment Submission</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div >
+      <div class="modal-body">
+        Are you sure you want to submit the assessement ?
+        <div class="d-flex justify-content-center">
+        <table class="table mt-3 table-striped " style="width: 350px;">
+          <thead>
+            <tr>
+              <th class="text-success" >Answered</th>
+              <th class="text-danger">Not Answered</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="text-success">15/15</td>
+              <td class="text-danger">00/15</td>
+            </tr>
+          </tbody>
+        </table>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">No</button>
+        <button type="button" class="btn btn-success"data-bs-toggle="modal" data-bs-target="#yes">Yes</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- Modal -->
+<div class="modal fade" id="yes" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3 class="modal-title fs-5" id="exampleModalLabel">Assessment Submission</h3>
+        <a href="../student_module/dashboard.html"><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button></a>
+      </div>
+      <div class="modal-body text-center p-3">
+       <img src="../assets/static/images/tick.png" height="35"> Assessment submitted successfully.
+      </div>
+      <div class="modal-footer">
+      </div>
+    </div>
+  </div>
+</div>
+
+
+    
+    <!-- nav end -->
+    <!-- body section start -->
+    <section id="pro" style="color: #03045e;">
+        <!-- container start -->
+        <div class="container-fluid p-3">
+            <!-- row start -->
+            <div class="row row-gap-3 ">
+                <!-- left col start -->
+                    <div class="col-xl-5 col-12">
+                        <!-- left col header start-->
+                        <div
+                class="d-flex flex-wrap justify-content-between p-3 rounded-top-2"
+                style="background-color: #caf0f8">
+                <div class="d-flex flex-wrap column-gap-2">
+                    <p class="fw-bold align-self-center mb-0">Question No:</p>
+                    <p class="align-self-center mb-0">15/15</p>
+                </div>
+                <div class="d-flex flex-wrap column-gap-3">
+                    <div class="d-flex flex-wrap column-gap-2">
+                    <p class="fw-bold align-self-center mb-0">Complexity :</p>
+                    <p class="align-self-center mb-0">Low</p>
+                    </div>
+                    <div class="d-flex flex-wrap column-gap-2">
+                    <p class="fw-bold align-self-center mb-0">Mark :</p>
+                    <p class="align-self-center mb-0">15</p>
+                    </div>
+                </div>
+                </div>
+            <!-- left col header end-->
+            <!-- left col body start -->
+            <div class="p-3">
+            <h4 class="mb-3 fw-bold">Programming</h4> 
+            <p>Given two strings s and t, return true if they are equal when both are typed into empty text editors. '#' means a backspace character.</p>
+            <ul style="list-style-type:none;">
+                <li><span>Input:</span>s = "ab#c", t = "ad#c"</li>
+                <li><span>Output:</span>true</li>
+                <li><span>Explanation:</span>Both s and t become "ac".</li>
+            </ul>
+            <ul style="list-style-type:none;">
+                <li><span>Input:</span>s = "ab##", t = "a#d#"</li>
+                <li><span>Output:</span>true</li>
+                <li><span>Explanation:</span>Both s and t become "a#".</li>
+            </ul>
+            <ul style="list-style-type:none;">
+                <li><span>Input:</span>s = "ab#$", t = "c#d#"</li>
+                <li><span>Output:</span>false</li>
+                <li><span>Explanation:</span>Both s and t  are not same.</li>
+            </ul>
+           <p class="h6 fw-bold">Constraints:</p>
+           <ul style="list-style-type:none;">
+            <li>1 <= s.length, t.length <= 200<</li>
+            <li>s and t only contain lowercase letters and '#' characters.</li>
+           </ul>
+           </div>
+            <!-- left col body end -->
+            <!-- left col footer start -->
+            <div
+            class="p-2 rounded-bottom-2 d-flex justify-content-start"
+            style="background-color: #caf0f8"
+          >
+          <a href="../student_module/assessment_two.html"
+              ><button class="btn" style="background-color: #90e0ef">
+               Previous
+              </button></a
+            >
+          </div>
+            <!-- left col footer end -->
+                </div>
+                 <!-- left col end-->
+                 <!-- center col start-->
+                <div class="col-xl-5 col-12 d-flex flex-column row-gap-2 rounded-2" style="max-height: 607px;overflow-y: scroll;">
+                       <!-- <img class="img-fluid "src="../assets/static/images/compiler.png"> -->
+                       <div class="d-flex flex-column" style="background-color: black;">
+                        <div class="d-flex justify-content-end p-2">
+                        <button class="btn btn-success btn-sm" type="submit">Run</button>
+                        </div>
+                        <textarea rows="20" cols="30" style="background-color: black;color: white;border:none">
+                        </textarea>
+                       </div>
+                       
+                       <div class="p-3 rounded-2" style="background-color:#e4fbff">
+                        <p class="fw-bold mb-1">Result</p>
+                        <p class="mb-0">1/1 Testcase passed</p>
+                       </div>
+                       <div class="p-3 rounded-2" style="background-color:#e4fbff">
+                        <p class="fw-bold mb-1">Compiler Message</p>
+                        <p class="mb-0">Compilation successful</p>
+                       </div>
+                       <div>
+                        <div class="p-2 rounded-2" style="background-color:#e4fbff">
+                            <p class="mb-0">Testcase 1</p>
+                            <div class="d-flex p-2 column-gap-2">
+                                <div class="p-2 w-50 rounded-2 " style="background-color:#caf6ff">
+                                    <p class="mb-1 fw-bold">Expected Output</p>
+                                    <p class="mb-0">true</p>
+                                </div>
+                                <div class="p-2 w-50 rounded-2 " style="background-color:#caf6ff">
+                                    <p class="mb-1 fw-bold w-50">Output</p>
+                                    <p class="mb-0">true</p>
+                                </div>
+                            </div>
+                            <p class="mb-0">Testcase 2</p>
+                            <div class="d-flex p-2 column-gap-2">
+                                <div class="p-2 w-50 rounded-2 " style="background-color:#caf6ff">
+                                    <p class="mb-1 fw-bold">Expected Output</p>
+                                    <p class="mb-0">true</p>
+                                </div>
+                                <div class="p-2 w-50 rounded-2 " style="background-color:#caf6ff">
+                                    <p class="mb-1 fw-bold w-50">Output</p>
+                                    <p class="mb-0">true</p>
+                                </div>
+                            </div>
+                        </div>
+                       </div>
+                </div>
+                <!-- center col end-->
+                <!-- right col start -->
+                <div class="col-md-12 col-xl-2 col-12 rounded-2">
+                    <!-- right col div start -->
+                    <div
+                      class="d-flex flex-column h-100 justify-content-between rounded-2 p-3 gap-3"
+                      style="background-color: #f2fbfc"
+                    >
+                    <!-- right col question numver circle start -->
+                    <div
+                        class="d-flex flex-wrap column-gap-2 row-gap-2 justify-content-lg-center"
+                      >
+                        <div class="c_inside justify-content-center c-unique">
+                          <a href="#" class="text-decoration-none">1</a>
+                        </div>
+                        <div class="c_inside justify-content-center c-unique">
+                            <a href="#" class="text-decoration-none ">2</a>
+                        </div>
+                        <div class="c_inside justify-content-center c-unique">
+                            <a href="#" class="text-decoration-none">3</a>
+                        </div>
+                        <div class="c_inside justify-content-center c-unique">
+                            <a href="#" class="text-decoration-none">4</a>
+                        </div>
+                        <div class="c_inside justify-content-center c-unique">
+                            <a href="#" class="text-decoration-none">5</a>
+                        </div>
+                        <div class="c_inside justify-content-center c-unique">
+                            <a href="#" class="text-decoration-none">6</a>
+                        </div>
+                        <div class="c_inside justify-content-center c-unique">
+                            <a href="#" class="text-decoration-none">7</a>
+                        </div>
+                        <div class="c_inside justify-content-center c-unique">
+                            <a href="#" class="text-decoration-none">8</a>
+                        </div>
+                        <div class="c_inside justify-content-center c-unique">
+                            <a href="#" class="text-decoration-none">9</a>
+                        </div>
+                        <div class="c_inside justify-content-center c-unique">
+                            <a href="#" class="text-decoration-none">10</a>
+                        </div>
+                        <div class="c_inside justify-content-center c-unique">
+                            <a href="#" class="text-decoration-none">11</a>
+                        </div>
+                        <div class="c_inside justify-content-center c-unique">
+                            <a href="#" class="text-decoration-none">12</a>
+                        </div>
+                        <div class="c_inside justify-content-center c-unique">
+                            <a href="#" class="text-decoration-none">13</a>
+                        </div>
+                        <div class="c_inside justify-content-center c-unique">
+                            <a href="#" class="text-decoration-none">14</a>
+                        </div>
+                        <div class="c_inside justify-content-center c-unique">
+                            <a href="#" class="text-decoration-none">15</a>
+                        </div>
+                    </div>
+                    <!-- right col question numver circle end -->
+                    <!-- right col answered question shown start -->
+                      <div style="font-size: 14px">
+                        <div class="m-1" style="border: 2px dotted black">
+                          <p class="mb-0 text-center">Answered</p>
+                          <p class="mb-0 text-success text-center">15/15</p>
+                        </div>
+                        <div class="m-1" style="border: 2px dotted black">
+                          <p class="mb-0 text-center">Not Answered</p>
+                          <p class="mb-0 text-danger text-center">00/15</p>
+                        </div>
+                      </div>
+                      <!-- right col answered question shown end -->
+                    </div>
+                    <!-- right col div end-->
+                  </div>
+                  <!-- right col end -->
+                <!-- right col end -->
+            </div>
+            <!-- row end -->
+        </div>
+        <!-- container end-->
+    </section>
+    <!-- body section end -->
+  </body>

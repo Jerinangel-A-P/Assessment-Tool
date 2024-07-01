@@ -1,0 +1,46 @@
+
+.one 
+{
+    background-color: rgb(255, 251, 251);
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 7px 29px 0px;
+  
+    padding: 10px;
+    border-radius: 5px;
+}
+.switch:checked
+{
+    background-color:#0fbde0 ;
+    outline: none;
+}
+.btn-shade
+{
+    label
+    {
+        background-color: white;
+    }
+.btn-check:checked + .btn
+{
+    background-color: #48CAE4;
+   border: none;
+}
+}
+.bg-t
+{
+   
+    .nav-pills
+    {
+        --bs-nav-pills-link-active-bg:#48CAE4;
+        --bs-nav-pills-link-active-color:#03045E;
+    }
+}
+.bg-tab:active
+{
+    background-color: #48CAE4;
+}
+
+
+
+#multiple-choice,
+#Descriptive,#programming{
+    display: none;
+}

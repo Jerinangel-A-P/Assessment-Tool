@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Dashboard</title>
+    <!-- style sheet link -->
+    <link rel="stylesheet" href="/assets/css/style.css"> 
+    <!-- fontawesome link -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.2/css/fontawesome.min.css" integrity="sha384-BY+fdrpOd3gfeRvTSMT+VUZmA728cfF9Z2G42xpaRkUGu2i3DyzpTURDo5A6CaLK" crossorigin="anonymous">
+    <link rel="stylesheet" hrefh="ttps://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- googlefont link -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Nunito+Sans:opsz@6..12&family=Saira&family=Tektur&display=swap" rel="stylesheet">
+    <!-- bootstrap link -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+</head>
+<body>
+  <!-- Nav bar start -->
+    <header class="col" >
+        <nav class="navbar navbar-expand-lg p-3 ">
+            <div class="container-fluid flex-nowrap">
+                 <!-- search bar start -->
+                 <form action="" class=""  >
+                    <div class=" rounded rounded-pill shadow-sm mb-0 search">
+                        <div class="input-group ">
+                          <input type="search" placeholder="Search" aria-describedby="button-addon1" class="form-control py-1 border-0 fs-6">
+                          <div class="input-group-append">
+                            <button id="button-addon1" type="submit" class="btn btn-link text-primary "><img  src="/assets/static/images/search.png" height="25"></button>
+                          </div>
+                        </div>
+                      </div>
+                    
+                </form>
+                 <!-- search bar end -->
+
+                 <!-- navbar items start -->
+                 <div class="collapse navbar-collapse float-end " id="navbarScroll">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                      <!-- notification start -->
+                        <li class="nav-item">
+                            <a class="py-0 nav-link active" aria-current="page" href="#"><img src="../assets/static/images/bell.png" height="40"></a>
+                        </li>
+                        <!-- notification end -->
+
+                        <!-- profile start -->
+                        <li class="m-auto">
+                           <div class="px-2 py-1 rounded-pill d-flex justify-content-center drop-division  ">
+                                <img class="  align-self-center"   src="../assets/static/images/student.png" height="25">
+                                <div class="nav-item dropdown ">
+                                  <a class="nav-link dropdown-toggle py-1" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Aruna
+                                  </a>
+                                  <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#">Profile</a></li>
+                                    <li><a class="dropdown-item" href="#">Log Out</a></li>
+                                  </ul>
+                                </div>
+                           </div>
+                        </li>
+                        <!-- profile end -->
+
+                        </ul>
+                 </div>
+                  <!-- navbar items end -->
+                  
+            </div>
+        </nav>
+    </header>
+    <!-- navbar end -->
+
+    <!--responsive sidebar start  -->
+    <div id="mySidebar" class="sidebar">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+        <div>
+          <a href="dashboard.html"><span>Dashboard</span> <img src="../assets/static/images/left4.png"></a>
+        </div>
+        <div>
+          <a href="assessment.html"><span>Assessment</span> <img src="../assets/static/images/left4.png"></a>
+        </div>
+        <div>
+          <a href="feedback.html"><span>Feedback</span><img src="../assets/static/images/left4.png"></a>
+        </div>
+        <div>
+          <a href="#"><span>Profile</span><img src="../assets/static/images/left4.png"></a>
+        </div>
+        <div>
+          <a href="/index.html"><span>Log Out</span></a>
+        </div>
+   </div>
+    
+    <div id="main">
+      <button class="navbar-toggler" onclick="openNav()">☰</button>
+    </div>
+  <!-- responsive sidebar end -->
+
+  <!-- sidebar start -->
+    <div class="side-menu">
+        <div  class="user"> <img src="../assets/static/images/logo.png"><h3 class="fs-5">STUDENT</h3></div> 
+        <div class="items">
+            <div class="items_box unique py-2 px-3 fs-6"> <a href="../student_module/assessment.html"><span>Dashboard</span> <img  src="../assets/static/images/left.png"></a></div>
+            <div  class="items_box py-2 px-3 fs-6"> <a href="../student_module/assessment.html"><span>Assessment</span> <img src="../assets/static/images/left4.png"></a></div>
+            <div  class="items_box py-2 px-3 fs-6"> <a href="../student_module/feedback.html"></i><span>Feedback</span><img  src="../assets/static/images/left4.png"></a></a></div>
+         </div>
+    </div>
+  <!-- sidebar end -->
+  <!-- Dashboard Section start-->
+     <section id="dashboard"class="main-body">
+      <div class="container">
+        <!-- row1 start -->
+          <div class="main  row">
+                <h2 class="h3 p-0 fw-bolder">Dashboard</h2>
+                <div class="container rounded row mx-0 ps-0 p-2 ">
+                  <div class="col rounded p-3 lh-2">
+                    <p class=" fs-6 my-0 pb-1 fw-bold ">Welcome<span class="fw-bolder"> Jerinangel👋</span> </p>
+                    <p class=" fs-6 my-0"> Your key to self-discovery and growth.</p> 
+                  </div>
+                  <div class="col d-flex justify-content-end">
+                  <img class="align-self-center" src="../assets/static/images/student.png">
+                  </div>
+                </div>
+          </div>
+          <!-- row1 end -->
+
+          <!-- row2 start -->
+          <div class="row my-3 progress h-auto bg-transparent row-gap-3">
+                  <div class="col-sm rounded-3 p-2">
+                    <p  class=" fw-lighter m-2">Assessment Completed</p>
+                    <div class="d-flex column-gap-2">
+                      <div class=""><img class="img-fluid" src="../assets/static/images/tick.png"></div>
+                      <p class="h4 fw-bolder my-auto">20</p>
+                    </div>
+                  </div>
+                  <div class=" offset-sm-1 col-sm rounded-3 p-2">
+                    <p class="  fw-lighter m-2">Assessment Expired</p>
+                    <div class="d-flex column-gap-2">
+                      <div><img class="img-fluid"src="../assets/static/images/cross.png" ></div>
+                      <p class="h4 fw-bolder my-auto">3</p>
+                    </div>
+                  </div>
+                  <div class=" offset-sm-1 col-sm rounded-3 p-2">
+                    <p class=" fw-lighter m-2">Highest Score</p>
+                    <div class="d-flex column-gap-2">
+                      <div><img class="img-fluid" src="../assets/static/images/medal.png"></div>
+                      <p class="fw-lighter mb-2">Assessment 2<br ><span class="h4 fw-bolder my-auto">120/150</span></p>
+                    </div>
+                  </div>
+                  <div class="offset-sm-1 col-sm rounded-3 p-2">
+                    <p class=" fw-lighter m-2">Badges</p>
+                    <div class="d-flex column-gap-2">
+                      <div><img class="img-fluid align-middle" src="../assets/static/images/badges.png" ></div>
+                      <p class="h4 fw-bolder my-auto">150</p>
+                    </div>
+                  </div>   
+          </div>
+          <!-- row2 end -->
+
+          <!-- row3 start -->
+          <div class="row my-5">
+                      <p class="h4 ps-0 mb-0" style="color: #03045E;">Upcoming Assessment</p>
+                      <div class="row row-cols-1 row-cols-xl-4 row-cols-md-2 g-2">
+                        
+
+                          <!-- Button trigger modal -->
+<button type="button" class="btn p-0" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+  <div class="col">
+    <div class="card rounded-4" style="width: 18rem;">
+      <div class="card-img m-4 p-2 mb-0" style="background-color: #CAF0F8; width:75px"><img src="../assets/static/images/assessment.png" alt=""></div>
+      <div class="card-body p-4">
+        <h5 class="card-title text-start">Java Basics</h5>
+        <div class="content-progress">
+            <div class="progress">
+              <div class="progress-bar bg-danger" role="progressbar" aria-label="Basic example" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+            <p class="text-muted text-start">Not Completed</p>
+        </div>
+        <div>
+          <div class="container">
+        <div class="row card-inside rounded-top-2">
+              <div class="col d-flex column-gap-2">
+                <img class="img-fluid h-50 align-self-center"  src="../assets/static/images/bar.png ">
+                <div class="content align-self-center">
+                  <p class="mb-0 ">Beginner</p>
+                  <p class="mb-0" >User Level</p>
+                </div>
+              </div>
+              <div class="col  d-flex column-gap-2">
+                <img class="img-fluid h-50 align-self-center" src="../assets/static/images/clock.png">
+                <div class="content align-self-center">
+                  <p class="mb-0">01:00:00</p>
+                  <p class="mb-0">Total Time</p>
+                </div>
+              </div>
+        </div>
+        <div class="row card-inside rounded-bottom-2">
+          <div class="col  d-flex column-gap-2">
+            <img class="align-self-center" src="../assets/static/images/calender.png" height="35">
+            <div class="content align-self-center">
+              <p class="mb-0">9 Oct,23</p>
+              <p class="mb-0">Start Date</p>
+            </div>
+          </div>
+          <div class="col  d-flex column-gap-2">
+            <img class="align-self-center" src="../assets/static/images/calender.png" height="35">
+            <div class="content align-self-center">
+              <p class="mb-0">11 Oct,23</p>
+              <p>End Date</p>
+            </div>
+          </div>
+    </div>
+    </div>
+       </div>
+      </div>
+    </div>
+  </div>
+</button>
+
+<!-- modal test discription start -->
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true" style="color: #03045E;">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content">
+      <div class="modal-header d-flex justify-content-between">
+        <h1 class="modal-title fs-5 fw-bold" id="staticBackdropLabel">Java Basics</h1>
+        <div class="d-flex column-gap-3">
+          <p class="fw-bold">Attempts: 00/01</p>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+      </div>
+      <div class="modal-body">
+        <table class="table" style="  --bs-table-color-state:null; color: #03045E;">
+          <tr>
+              <th>S.No</th>
+              <th>Questions</th>
+              <th>No.of Questions</th>
+              
+              <th>Marks</th>
+          </tr>
+          <tr>
+              <td>1.</td>
+              <td>Mcq</td>
+              <td>10</td>
+             
+              <td>10</td>
+          </tr>
+          <tr>
+              <td>2.</td>
+              <td>Descriptive</td>
+              <td>2</td>
+              
+              <td>4</td>
+          </tr>
+          <tr>
+              <td>3.</td>
+              <td>Coding</td>
+              <td>2</td>
+              
+              <td>20</td>
+          </tr>
+          <tr>
+              <td></td>
+              <td >Total</td>
+              <td>14</td>
+           
+              <td>34</td>
+          </tr>
+      </table>
+      </div>
+      <div class="modal-footer">
+        <!-- <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button> -->
+        <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#start">Start Test</button>
+
+      </div>
+    </div>
+  </div>
+</div>
+<!-- modal test discription end -->
+<!-- Modal instruction start-->
+<div class="modal fade" id="start" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true" style="color: #03045E;">
+  <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5 fw-bold" id="staticBackdropLabel">Teams and Conditions</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <ul style="line-height: 32px;">
+          <li>Access the test within the designated timeframe using your credentials.</li>
+          <li>Understand the test format and time limit for efficient time management.</li>
+          <li>Ensure your device and web browser meet technical requirements.</li>
+          <li>Maintain a quiet and distraction-free test-taking environment.</li>
+          <li>Uphold academic integrity; do not seek unauthorized assistance or engage in dishonest practices.</li>
+          <li>Avoid external materials, notes, or unauthorized devices during the test.</li>
+          <li>Save your progress regularly and follow instructions for test submission.</li>
+          <li>Contact technical support for assistance with technical issues; refrain from refreshing or closing the test page without instructions.</li>
+          <li>Anticipate receiving test results within the specified timeframe.</li>
+          <li>Adhere to the portal's privacy policy and log out after completing the test.</li>
+      </ul>
+      </div>
+      <div class="modal-footer">
+        <a href="../student_module/assessment_one.html"><button type="button" class="btn btn-success">Proceed</button></a>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- modal instruction end -->
+
+
+
+                        <div class="col">
+                          <div class="card rounded-4" style="width: 18rem;">
+                            <div class="card-img m-4 p-2 mb-0" style="background-color: #CAF0F8; width:75px"><img src="../assets/static/images/assessment.png" alt=""></div>
+                            <div class="card-body p-4">
+                              <h5 class="card-title">Java Control Statement</h5>
+                              <div class="content-progress">
+                                  <div class="progress">
+                                    <div class="progress-bar bg-danger" role="progressbar" aria-label="Basic example" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                                  </div>
+                                  <p class="text-muted">Not Completed</p>
+                              </div>
+                              <div>
+                                <div class="container">
+                              <div class="row card-inside rounded-top-2">
+                                    <div class="col d-flex column-gap-2">
+                                      <img class="img-fluid h-50 align-self-center"  src="../assets/static/images/bar.png ">
+                                      <div class="content align-self-center">
+                                        <p class="mb-0 ">Beginner</p>
+                                        <p class="mb-0" >User Level</p>
+                                      </div>
+                                    </div>
+                                    <div class="col  d-flex column-gap-2">
+                                      <img class="img-fluid h-50 align-self-center" src="../assets/static/images/clock.png">
+                                      <div class="content align-self-center">
+                                        <p class="mb-0">01:00:00</p>
+                                        <p class="mb-0">Total Time</p>
+                                      </div>
+                                    </div>
+                              </div>
+                              <div class="row card-inside rounded-bottom-2">
+                                <div class="col  d-flex column-gap-2">
+                                  <img class="align-self-center" src="../assets/static/images/calender.png" height="35">
+                                  <div class="content align-self-center">
+                                    <p class="mb-0">9 Oct,23</p>
+                                    <p class="mb-0">Start Date</p>
+                                  </div>
+                                </div>
+                                <div class="col  d-flex column-gap-2">
+                                  <img class="align-self-center" src="../assets/static/images/calender.png" height="35">
+                                  <div class="content align-self-center">
+                                    <p class="mb-0">11 Oct,23</p>
+                                    <p class="mb-0">End Date</p>
+                                  </div>
+                                </div>
+                          </div>
+                          </div>
+                             </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="col">
+                          <div class="card rounded-4" style="width: 18rem;">
+                            <div class="card-img m-4 p-2 mb-0" style="background-color: #CAF0F8; width:75px"><img src="../assets/static/images/assessment.png" alt=""></div>
+                            <div class="card-body p-4">
+                              <h5 class="card-title">Java loops</h5>
+                              <div class="content-progress">
+                                  <div class="progress">
+                                    <div class="progress-bar bg-danger" role="progressbar" aria-label="Basic example" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                                  </div>
+                                  <p class="text-muted">Not Completed</p>
+                              </div>
+                              <div>
+                                <div class="container">
+                              <div class="row card-inside rounded-top-2">
+                                    <div class="col d-flex column-gap-2">
+                                      <img class="img-fluid h-50 align-self-center"  src="../assets/static/images/bar.png ">
+                                      <div class="content align-self-center">
+                                        <p class="mb-0 ">Beginner</p>
+                                        <p class="mb-0" >User Level</p>
+                                      </div>
+                                    </div>
+                                    <div class="col  d-flex column-gap-2">
+                                      <img class="img-fluid h-50 align-self-center" src="../assets/static/images/clock.png">
+                                      <div class="content align-self-center">
+                                        <p class="mb-0">01:00:00</p>
+                                        <p class="mb-0">Total Time</p>
+                                      </div>
+                                    </div>
+                              </div>
+                              <div class="row card-inside rounded-bottom-2">
+                                <div class="col  d-flex column-gap-2">
+                                  <img class="align-self-center" src="../assets/static/images/calender.png" height="35">
+                                  <div class="content align-self-center">
+                                    <p class="mb-0">9 Oct,23</p>
+                                    <p class="mb-0">Start Date</p>
+                                  </div>
+                                </div>
+                                <div class="col  d-flex column-gap-2">
+                                  <img class="align-self-center" src="../assets/static/images/calender.png" height="35">
+                                  <div class="content align-self-center">
+                                    <p class="mb-0">11 Oct,23</p>
+                                    <p class="mb-0">End Date</p>
+                                  </div>
+                                </div>
+                          </div>
+                          </div>
+                             </div>
+                            </div>
+                          </div>
+                        </div>
+
+                      </div>
+                      
+          </div> 
+          
+          <!-- row3 end -->
+
+          <!-- row4 start -->
+          <div class="row">
+            <p class="h4 ps-0" style="color: #03045E;">Statistic Report</p>
+            <div class="card text-center  graph-card" style=" max-width: 590px;">
+              <div class="card-header">
+                <ul class="nav nav-pills card-header-pills ">
+                  <li class="nav-item">
+                    <a class="nav-link" data-bs-toggle="collapse" href="#collapseExample"  aria-expanded="false" aria-controls="collapseExample"><button class="btn btn-sm" style="background-color: #03045E; color: white;">Assessment</button></a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link " data-bs-toggle="collapse" href="#comparision"  aria-expanded="false" aria-controls="comparision" ><button class="btn btn-sm " style="background-color: #03045E; color: white;">Comparision</button></a>
+                  </li>
+                </ul>
+              </div>
+              <div class="collapse" id="collapseExample">
+              <div class="card-body ">
+                <canvas id="chart" aria-label="chart" heigth="350" width="580"  style="width: 100%;"></canvas>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.1.1/chart.min.js"></script>
+   <script>
+      var chrt = document.getElementById("chart").getContext("2d");
+      var chartId = new Chart(chrt, {
+         type: 'line',
+         data: {
+            labels: ["C basic", "C Memory Mangement", "C operators", "C functions", "C pointers", "C structure"],
+            datasets: [{
+               label: "Assessment",
+               data: [20, 40, 30, 35, 30, 20],
+               backgroundColor: ['yellow', 'aqua', 'pink', 'lightgreen', 'lightblue', 'gold'],
+               borderColor: ['black'],
+               borderWidth: 2,
+               pointRadius: 5,
+            }],
+         },
+         options: {
+            responsive: false,
+         },
+      });
+   </script>
+              </div>
+              </div>
+              <div class="collapse" id="comparision">
+                <div class="card-body ">
+                  <canvas id="chartId" aria-label="chart" heigth="350" width="580"  style="width: 100%;"></canvas>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.1.1/chart.min.js"></script>
+     <script>
+        var chrt = document.getElementById("chartId").getContext("2d");
+        var chartId = new Chart(chrt, {
+           type: 'line',
+           data: {
+              labels: ['student 1','student 1' ,'you','Top Performer'],
+              datasets: [{
+                 label:" You vs. Top Performer",
+                 data: [30,40,70,80],
+                 backgroundColor: ['red','green'],
+                 borderColor: ['black'],
+                 borderWidth: 2,
+                 pointRadius: 5,
+              }],
+           },
+           options: {
+              responsive: false,
+           },
+        });
+     </script>
+                </div>
+                </div>
+            </div>
+          </div>
+          </div>
+     </section>
+  <!-- sidebar script link -->
+  <script src="../assets/script/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Dashboard</title>
+    <!-- style sheet link -->
+    <link rel="stylesheet" href="/assets/css/style.css"/>
+    <!-- fontawesome link -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.2/css/fontawesome.min.css" integrity="sha384-BY+fdrpOd3gfeRvTSMT+VUZmA728cfF9Z2G42xpaRkUGu2i3DyzpTURDo5A6CaLK" crossorigin="anonymous">
+    <link rel="stylesheet" hrefh="ttps://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- googlefont link -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Nunito+Sans:opsz@6..12&family=Saira&family=Tektur&display=swap" rel="stylesheet">
+    <!-- bootstrap link -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+</head>
+<body>
+  <!-- Nav bar start -->
+    <header class="col" >
+        <nav class="navbar navbar-expand-lg p-3 ">
+            <div class="container-fluid flex-nowrap">
+                 <!-- search bar start -->
+                 <form action="" class=""  >
+                    <div class=" rounded rounded-pill shadow-sm mb-0 search">
+                        <div class="input-group ">
+                          <input type="search" placeholder="Search" aria-describedby="button-addon1" class="form-control py-1 border-0 fs-6">
+                          <div class="input-group-append">
+                            <button id="button-addon1" type="submit" class="btn btn-link text-primary "><img  src="/assets/static/images/search.png" height="25"></button>
+                          </div>
+                        </div>
+                      </div>
+                    
+                </form>
+                 <!-- search bar end -->
+
+                 <!-- navbar items start -->
+                 <div class="collapse navbar-collapse float-end " id="navbarScroll">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                      <!-- notification start -->
+                        <li class="nav-item">
+                            <a class="py-0 nav-link active" aria-current="page" href="#"><img src="../assets/static/images/bell.png" height="40"></a>
+                        </li>
+                        <!-- notification end -->
+
+                        <!-- profile start -->
+                        <li class="m-auto">
+                           <div class="px-2 py-1 rounded-pill d-flex justify-content-center drop-division  ">
+                                <img class="  align-self-center"   src="../assets/static/images/student.png" height="25">
+                                <div class="nav-item dropdown ">
+                                  <a class="nav-link dropdown-toggle py-1" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                     Jerinangel
+                                  </a>
+                                  <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#">Profile</a></li>
+                                    <li><a class="dropdown-item" href="#">Log Out</a></li>
+                                  </ul>
+                                </div>
+                           </div>
+                        </li>
+                        <!-- profile end -->
+
+                        </ul>
+                 </div>
+                  <!-- navbar items end -->
+                  
+            </div>
+        </nav>
+    </header>
+    <!-- navbar end -->
+
+    <!--responsive sidebar start  -->
+    <div id="mySidebar" class="sidebar">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+        <div>
+          <a href="dashboard.html"><span>Dashboard</span> <img src="../assets/static/images/left4.png"></a>
+        </div>
+        <div>
+          <a href="assessment.html"><span>Assessment</span> <img src="../assets/static/images/left4.png"></a>
+        </div>
+        <div>
+          <a href="feedback.html"><span>Feedback</span><img src="../assets/static/images/left4.png"></a>
+        </div>
+        <div>
+          <a href="#"><span>Profile</span><img src="../assets/static/images/left4.png"></a>
+        </div>
+        <div>
+          <a href="/index.html"><span>Log Out</span></a>
+        </div>
+   </div>
+    
+    <div id="main">
+      <button class="navbar-toggler" onclick="openNav()">☰</button>
+    </div>
+  <!-- responsive sidebar end -->
+
+  <!-- sidebar start -->
+    <div class="side-menu">
+        <div  class="user"> <img src="../assets/static/images/logo.png"><h3 class="fs-5">STUDENT</h3></div> 
+        <div class="items">
+            <div class="items_box  py-2 px-3 fs-6"> <a href="../student_module/assessment.html"><span>Dashboard</span> <img  src="../assets/static/images/left4.png"></a></div>
+            <div  class="items_box py-2 px-3 fs-6"> <a href="../student_module/assessment.html"><span>Assessment</span> <img src="../assets/static/images/left4.png"></a></div>
+            <div  class="items_box unique py-2 px-3 fs-6"> <a href="../student_module/feedback.html"></i><span>Feedback</span><img  src="../assets/static/images/left.png"></a></a></div>
+         </div>
+    </div>
+  <!-- sidebar end -->
+
+  <!-- report section start-->
+    <section id="report"class="main-body" >
+      <!-- breadcrump start -->
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a href="../student_module/feedback.html">Feedback</a></li>
+              <li class="breadcrumb-item active" aria-current="page">Report</li>
+            </ol>
+          </nav>
+        <!--breadcrump end-->
+
+        <!--detail in the top start-->
+        <div class="d-flex justify-content-between flex-wrap" style="color:#03045E">
+             <div class="align-self-center">
+                <p class="h4 fw-bolder">C Programming</p>
+             </div>
+             <div class="d-flex column-gap-2">
+                <p class="h5 fw-bolder  align-self-center">Start Date:<span class="h6"> 9 Oct,23</span></p>
+             </div>
+             <div class="d-flex column-gap-2">
+                <p class="h5 fw-bolder align-self-center">End Date:<span class="h6"> 12 Oct,23</span></p>
+            </div>
+            <div class="d-flex column-gap-2 align-items-center">
+                <p class="h5 fw-bolder">Completed On:<span class="h6"> 12 Oct,23</span></p>
+            </div>
+        </div>
+        <!--detail in the top end-->
+
+        <!-- feedback start -->
+        <div class="d-flex flex-wrap row-gap-3 mt-1 justify-content-around">
+          <!-- feedback left start -->
+          <div  class="rounded-3 p-2" style="background-color: #CAF0F8; color:#03045E; font-size:0.7rem;">
+                <div class="p-1">
+                    <p class="mb-0">Mcq</p>
+                    <div class="d-flex">
+                    <div class="bg-success-subtle d-flex flex-column rounded-start-2 p-2">
+                        <p class="text-success mb-0">No of Questions Correct</p>
+                        <h5 class="text-success align-self-center mb-0">20</h5>
+                    </div> 
+                    <div class="bg-danger-subtle d-flex flex-column p-2">
+                        <p class="text-danger mb-0">No of Questions Incorrect</p>
+                        <h5 class="text-danger align-self-center mb-0">5</h5>
+                    </div> 
+                    <div class="d-flex flex-column rounded-end-2 p-2"style="background-color:#48CAE4;">
+                        <p class="mb-0">Total Mark</p>
+                        <h5 class="align-self-center mb-0">20</h5>
+                    </div>    
+                </div>
+                </div>
+                <div class="p-1">
+                  <p class="mb-0">Discription</p>
+                  <div class="d-flex">
+                  <div class="bg-success-subtle d-flex flex-column rounded-start-2 p-2">
+                      <p class="text-success mb-0">No of Questions Correct</p>
+                      <h5 class="text-success align-self-center mb-0">4</h5>
+                  </div> 
+                  <div class="bg-danger-subtle d-flex flex-column p-2">
+                      <p class="text-danger mb-0">No of Questions Incorrect</p>
+                      <h5 class="text-danger align-self-center mb-0">2</h5>
+                  </div> 
+                  <div class="d-flex flex-column rounded-end-2 p-2"style="background-color:#48CAE4;">
+                      <p class="mb-0">Total Mark</p>
+                      <h5 class="align-self-center mb-0">4</h5>
+                  </div>    
+              </div>
+                </div>
+                <div class="p-1">
+                  <p class="mb-0">Programming</p>
+                  <div class="d-flex">
+                  <div class="bg-success-subtle d-flex flex-column rounded-start-2 p-2">
+                      <p class="text-success mb-0">No of Questions Correct</p>
+                      <h5 class="text-success align-self-center mb-0">1</h5>
+                  </div> 
+                  <div class="bg-danger-subtle d-flex flex-column p-2">
+                      <p class="text-danger mb-0">No of Questions Incorrect</p>
+                      <h5 class="text-danger align-self-center mb-0">1</h5>
+                  </div> 
+                  <div class="d-flex flex-column rounded-end-2 p-2"style="background-color:#48CAE4;">
+                      <p class="mb-0">Total Mark</p>
+                      <h5 class="align-self-center mb-0">15</h5>
+                  </div>    
+              </div>
+                </div>
+
+            </div>
+            <!-- feedback left end -->
+
+            <!-- feedback right start -->
+            <div class="mark_report rounded-2">
+                <h5>Total Score</h5>
+                <div class="mark_inside">
+                    <p>70%</p>
+                </div>
+            </div>
+            <!-- feedback right end -->
+        </div>
+        <!-- feedback end -->
+        <!-- areas of improvement start -->
+        <div class="mt-4">
+          <p class="h4 fw-bolder" style="color: #03045E;">Qualitative Feedback</p>
+          <div class="rounded-2 p-4" style="background-color:#CAF0F8;color: #03045E;">
+            <p class="h6"><b>Areas for Improvement:</b><br>
+              <ol>
+                  <li>Pay close attention to syntax errors in your code. There were a few instances where small syntax mistakes affected the program's functionality.</li>
+                  <li>Work on optimizing your code for efficiency. In some cases, your code could be more streamlined.</li>
+                  <li>Don't forget to test your programs thoroughly. Make sure to cover a wide range of test cases to ensure robustness.</li>
+              </ol></p>
+          </div>
+        </div>
+        <!-- areas of improvement end -->
+    </section>
+
+  <!-- report section end-->
+
+<script src="../assets/script/script.js"></script>
+</body>
+</html>

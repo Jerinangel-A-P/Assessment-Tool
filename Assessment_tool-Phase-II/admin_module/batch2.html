@@ -1,0 +1,795 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Dashboard</title>
+    
+    <!-- fontawesome link -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.2/css/fontawesome.min.css" integrity="sha384-BY+fdrpOd3gfeRvTSMT+VUZmA728cfF9Z2G42xpaRkUGu2i3DyzpTURDo5A6CaLK" crossorigin="anonymous">
+    <link rel="stylesheet" hrefh="ttps://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- googlefont link -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Nunito+Sans:opsz@6..12&family=Saira&family=Tektur&display=swap" rel="stylesheet">
+    <!-- bootstrap link -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <!-- style sheet link -->
+    <link rel="stylesheet" href="/assets/css/style.css"/>
+
+    <script src="https://cdn.ckeditor.com/ckeditor5/40.0.0/classic/ckeditor.js"></script>
+
+    <!-- data table link -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.datatables.net/1.13.7/css/jquery.dataTables.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.datatables.net/buttons/2.4.2/css/buttons.dataTables.min.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+</head>
+
+<body>
+  <!-- Nav bar start -->
+  <header class="col" >
+    <nav class="navbar navbar-expand-lg p-3 ">
+        <div class="container-fluid flex-nowrap">
+             <!-- search bar start -->
+             <form action="" class=""  >
+                <div class=" rounded rounded-pill shadow-sm mb-0 search">
+                    <div class="input-group ">
+                      <input type="search" placeholder="Search" aria-describedby="button-addon1" class="form-control py-1 border-0 fs-6">
+                      <div class="input-group-append">
+                        <button id="button-addon1" type="submit" class="btn btn-link text-primary "><img  src="/assets/static/images/search.png" height="25"></button>
+                      </div>
+                    </div>
+                  </div>
+                
+            </form>
+             <!-- search bar end -->
+
+             <!-- navbar items start -->
+             <div class="collapse navbar-collapse float-end " id="navbarScroll">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                  <!-- notification start -->
+                    <li class="nav-item">
+                        <a class="py-0 nav-link active" aria-current="page" href="#"><img src="../assets/static/images/bell.png" height="40"></a>
+                    </li>
+                    <!-- notification end -->
+
+                    <!-- profile start -->
+                    <li class="m-auto">
+                       <div class="px-2 py-1 rounded-pill d-flex justify-content-center drop-division  ">
+                            <img class="  align-self-center"   src="../assets/static/images/profile2.png" height="25">
+                            <div class="nav-item dropdown ">
+                              <a class="nav-link dropdown-toggle py-1" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                 Aruna
+                              </a>
+                              <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Profile</a></li>
+                                <li><a class="dropdown-item" href="#">Log Out</a></li>
+                              </ul>
+                            </div>
+                       </div>
+                    </li>
+                    <!-- profile end -->
+
+                    </ul>
+             </div>
+              <!-- navbar items end -->
+              
+        </div>
+    </nav>
+</header>
+    <!-- navbar end -->
+
+    <!--responsive sidebar start  -->
+    <div id="mySidebar" class="sidebar">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+        <div>
+          <a href="admin.html"><span>User Control</span> <img src="../assets/static/images/left4.png"></a>
+        </div>
+        <div>
+          <a href="batch2.html"><span>Batch Control</span> <img src="../assets/static/images/left4.png"></a>
+        </div>
+        <div>
+          <a href="assessment2.html"><span>Assessment</span><img src="../assets/static/images/left4.png"></a>
+        </div>
+        <div>
+            <a href="report.html"><span>Reports</span><img src="../assets/static/images/left4.png"></a>
+          </div>
+        <div>
+          <a href="#"><span>Profile</span><img src="../assets/static/images/left4.png"></a>
+        </div>
+        <div>
+          <a href="/index.html"><span>Log Out</span></a>
+        </div>
+   </div>
+    
+    <div id="main">
+      <button class="navbar-toggler" onclick="openNav()">☰</button>
+    </div>
+  <!-- responsive sidebar end -->
+
+  <!-- sidebar start -->
+  <div class="side-menu">
+    <div  class="user"> <img src="../assets/static/images/logo.png"><h3 class="fs-5">ADMIN</h3></div> 
+    <div class="items">
+        <div class="items_box  py-2 px-3 fs-6"> <a href="admin.html"><span>User Control</span> <img  src="../assets/static/images/left4.png"></a></div>
+        <div  class="items_box py-2 px-3 fs-6 unique"> <a href="batch2.html"><span>Batch Control</span> <img src="../assets/static/images/left.png"></a></div>
+        <div  class="items_box py-2 px-3 fs-6"> <a href="assessment2.html"></i><span>Assessment </span><img  src="../assets/static/images/left4.png"></a></a></div>
+        <div  class="items_box py-2 px-3 fs-6 "> <a href="report.html"></i><span>Reports</span><img  src="../assets/static/images/left4.png"></a></a></div>
+     </div>
+</div>
+<section id="admin_dashboard"class="main-body">
+    <div class="container">
+        <div class="main ">
+            <div class="main d-flex justify-content-between">
+              <h2 class="h3 p-0 mb-3 fw-bolder">Batch control</h2>
+              <button class="btn"  style="background-color: #CAF0F8;"  data-bs-toggle="modal" data-bs-target="#add">Add Batch</button>
+              </div>
+            </div> 
+            <div class="container container-table p-0 p-3 mt-1" style="background-color: rgb(255, 251, 251);
+            box-shadow: rgba(0, 0, 0, 0.2) 0px 7px 29px 0px;  margin-top: 20px ; overflow-y: scroll;">
+              <div class="row">
+                <div class="col p-0 ">
+                  <table class="table table-responsive mt-2"  style="background-color: #CAF0F8;" id="myTable">
+                    <thead style="z-index: 2;">
+                        <th>S.No</th>
+                <th>Batch ID</th>
+                <th>Batch Name</th>
+                <th>Batch Course</th>
+                <th>Instructor</th>
+                <th>Admin</th>
+                <th>Status</th>
+                <th></th>
+                        </thead>
+                        <tbody>
+<tr>
+    <td>1</td>
+    <td>B01</td>
+    <td>Batch 1</td>
+    <td>Data Science and Big Data</td>
+    <td>Aruna</td>
+    <td>Cheran</td>
+    <td>Upcoming</td>
+    <td >
+        <button class="btn btn-secondary edit-button btn-sm" >Edit</button>                     
+            
+            <button class="btn btn-danger btn-sm delete-button"data-bs-toggle="modal" data-bs-target="#delete" onclick="deleteRow(this)">Delete</button>
+        </td>
+</tr>      
+<tr>
+    <td>2</td>
+    <td>B02</td>
+    <td>Batch 2</td>
+    <td>Cybersecurity</td>
+    <td>Sakthi</td>
+    <td>Doe</td>
+    <td>Ongoing</td>
+    <td >
+        <button class="btn btn-secondary edit-button btn-sm" >Edit</button>                     
+            
+            <button class="btn btn-danger btn-sm delete-button"data-bs-toggle="modal" data-bs-target="#delete" onclick="deleteRow(this)">Delete</button>
+        </td>
+</tr>
+<tr>
+    <td>3</td>
+    <td>B03</td>
+    <td>Batch 3</td>
+    <td>Blockchain and Cryptocurrency</td>
+    <td>Nisha</td>
+    <td>John</td>
+    <td>Completed</td>
+    <td >
+        <button class="btn btn-secondary edit-button btn-sm">Edit</button>                     
+            
+            <button class="btn btn-danger btn-sm delete-button"data-bs-toggle="modal" data-bs-target="#delete" onclick="deleteRow(this)">Delete</button>
+        </td>
+</tr>
+<tr>
+    <td>4</td>
+    <td>B04</td>
+    <td>Batch 4</td>
+    <td>Machine Learning</td>
+    <td>Jane</td>
+    <td>Smith</td>
+    <td>Upcoming</td>
+    <td >
+        <button class="btn btn-secondary edit-button btn-sm" >Edit</button>                     
+            
+            <button class="btn btn-danger btn-sm delete-button"data-bs-toggle="modal" data-bs-target="#delete" onclick="deleteRow(this)">Delete</button>
+        </td>
+</tr>
+<tr>
+    <td>5</td>
+    <td>B05</td>
+    <td>Batch 5</td>
+    <td>Web Development</td>
+    <td>Mike</td>
+    <td>Williams</td>
+    <td>Ongoing</td>
+    <td >
+        <button class="btn btn-secondary edit-button btn-sm" >Edit</button>                     
+            
+            <button class="btn btn-danger btn-sm delete-button"data-bs-toggle="modal" data-bs-target="#delete" onclick="deleteRow(this)">Delete</button>
+        </td>
+</tr>
+<tr>
+    <td>6</td>
+    <td>B06</td>
+    <td>Batch 6</td>
+    <td>Artificial Intelligence</td>
+    <td>Chris</td>
+    <td>Brown</td>
+    <td>Completed</td>
+    <td >
+        <button class="btn btn-secondary edit-button btn-sm" >Edit</button>                     
+            
+            <button class="btn btn-danger btn-sm delete-button"data-bs-toggle="modal" data-bs-target="#delete" onclick="deleteRow(this)">Delete</button>
+        </td>
+</tr>
+<tr>
+    <td>7</td>
+    <td>B07</td>
+    <td>Batch 7</td>
+    <td>Network Security</td>
+    <td>Eva</td>
+    <td>Miller</td>
+    <td>Upcoming</td>
+    <td >
+        <button class="btn btn-secondary edit-button btn-sm" >Edit</button>                     
+            
+            <button class="btn btn-danger btn-sm delete-button"data-bs-toggle="modal" data-bs-target="#delete" onclick="deleteRow(this)">Delete</button>
+        </td>
+</tr>
+<tr>
+    <td>8</td>
+    <td>B08</td>
+    <td>Batch 8</td>
+    <td>Database Management</td>
+    <td>Alex</td>
+    <td>Taylor</td>
+    <td>Ongoing</td>
+    <td >
+        <button class="btn btn-secondary edit-button btn-sm" >Edit</button>                     
+            
+            <button class="btn btn-danger btn-sm delete-button"data-bs-toggle="modal" data-bs-target="#delete" onclick="deleteRow(this)">Delete</button>
+        </td>
+</tr>
+<tr>
+    <td>9</td>
+    <td>B09</td>
+    <td>Batch 9</td>
+    <td>Mobile App Development</td>
+    <td>David</td>
+    <td>Davis</td>
+    <td>Completed</td>
+    <td >
+        <button class="btn btn-secondary edit-button btn-sm">Edit</button>                     
+            
+            <button class="btn btn-danger btn-sm delete-button"data-bs-toggle="modal" data-bs-target="#delete" onclick="deleteRow(this)">Delete</button>
+        </td>
+</tr>
+<tr>
+    <td>10</td>
+    <td>B10</td>
+    <td>Batch 10</td>
+    <td>Software Testing</td>
+    <td>Grace</td>
+    <td>Jones</td>
+    <td>Upcoming</td>
+    <td >
+        <button class="btn btn-secondary edit-button btn-sm">Edit</button>                     
+            
+            <button class="btn btn-danger btn-sm delete-button" data-bs-toggle="modal" data-bs-target="#delete" onclick="deleteRow(this)">Delete</button>
+        </td>
+</tr>                    
+                        </tbody> 
+                        </table>
+                        </div>
+                        </div>
+            
+        </div>
+        </section>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    
+        <script src="https://cdn.datatables.net/1.13.7/js/jquery.dataTables.min.js"></script>
+        <script src="https://cdn.datatables.net/buttons/2.4.2/js/dataTables.buttons.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/pdfmake.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/vfs_fonts.js"></script>
+        <script src="https://cdn.datatables.net/buttons/2.4.2/js/buttons.html5.min.js"></script>
+        <script
+          src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+          integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+          crossorigin="anonymous"
+        ></script>
+        <script
+          src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+          integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+          crossorigin="anonymous"
+        ></script>
+
+        <div class="modal" id="userModal" tabindex="-1" >
+            <div class="modal-dialog modal-xl" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">User Form</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" >
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <form id="userForm"  class="d-grid gap-3 p-3 rounded-2" style="background-color:rgb(224, 247, 252);">
+                            <div class="form-group">
+                              <div class=" row ">
+                                <label for="userName" class="col-lg-2">Batch Name <sup class="text-danger">*</sup></label>
+                                <div class="col-lg-10 col-75 col-12">
+                                  <input type="text" id="userName" name="userName" onkeyup="validateUserName()">
+                                </div>
+                                </div>
+                                <small id="userNameErrorMessage" class="form-text text-danger" ></small>
+                            </div>
+                         
+                            <div class="form-group">
+                              <div class=" row">
+                              <label for="course" class="col-lg-2">Batch Course <sup class="text-danger">*</sup></label>
+                              <div class="col-lg-10 col-75 col-12">
+                                <input type="text" id="course" name="course" onkeyup="validateCourse()">  
+                              </div>
+                              </div>
+                              <small id="courseErrorMessage" class="form-text text-danger"></small>   
+                              </div>
+                              <div class="form-group">
+                                <div class=" row">
+                                <label for="instr" class="col-lg-2">Instructor Name</label>
+                                <div class="col-lg-10 col-75 col-12">
+                                  <input type="text" id="instr" name="instr" onkeyup="validateinstr()">  
+                                </div>
+                                </div>
+                                <small id="instrErrorMessage" class="form-text text-danger"></small>   
+                                </div>
+                                <div class="form-group">
+                                    <div class=" row">
+                                    <label for="admin" class="col-lg-2">Admin Name</label>
+                                    <div class="col-lg-10 col-75 col-12">
+                                      <input type="text" id="admin" name="admin" onkeyup="validateadmin()">  
+                                    </div>
+                                    </div>
+                                    <small id="adminErrorMessage" class="form-text text-danger"></small>   
+                                    </div>
+                          <div class="form-group">
+                            <div class=" row">
+                            <label for="status" class="col-lg-2">Status <sup class="text-danger">*</sup></label>
+                            <div class="col-lg-10 col-75 col-12">
+                              <select id="status" name="status"  >
+                                <option value="">Select the status</option>
+                                <option value="Upcoming">Upcoming</option>
+                                <option value="Ongoing">Ongoing</option>
+                                <option value="Completed">Completed</option>
+                              </select> 
+                              </div> 
+                              <small id="statusErrorMessage" class="form-text text-danger"></small>                       
+                            </div>
+                        </div>
+<div class="d-flex justify-content-center">
+                            <button type="button" class="btn btn-success mt-2 " id="userModalSaveBtn" onclick="debug()">Save User</button>
+                            </div>
+                        </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="modal" id="add" tabindex="-1" >
+              <div class="modal-dialog modal-xl" role="document">
+                  <div class="modal-content">
+                      <div class="modal-header">
+                          <h5 class="modal-title">User Form</h5>
+                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" >
+                              <span aria-hidden="true">&times;</span>
+                          </button>
+                      </div>
+                      <div class="modal-body">
+                          <form id="userForm"  class="d-grid gap-3 p-3 rounded-2" style="background-color:rgb(224, 247, 252);" >
+                              <div class="form-group">
+                                <div class=" row ">
+                                  <label for="userNam" class="col-lg-2">Batch Name <sup class="text-danger">*</sup></label>
+                                  <div class="col-lg-10 col-75 col-12">
+                                    <input type="text" id="userNam" name="userNam" onkeyup="validateUserName()">
+                                  </div>
+                                  </div>
+                                  <small id="userNameErrorMessag" class="form-text text-danger" ></small>
+                              </div>
+                           
+                              <div class="form-group">
+                                <div class=" row">
+                                <label for="cours" class="col-lg-2">Batch Course <sup class="text-danger">*</sup></label>
+                                <div class="col-lg-10 col-75 col-12">
+                                  <input type="text" id="cours" name="cours" onkeyup="validateCourse()">  
+                                </div>
+                                </div>
+                                <small id="courseErrorMessag" class="form-text text-danger"></small>   
+                                </div>
+                                <div class="form-group">
+                                  <div class=" row">
+                                  <label for="inst" class="col-lg-2">Instructor Name</label>
+                                  <div class="col-lg-10 col-75 col-12">
+                                    <input type="text" id="inst" name="inst" onkeyup="validateinstr()">  
+                                  </div>
+                                  </div>
+                                  <small id="instrErrorMessag" class="form-text text-danger"></small>   
+                                  </div>
+                                  <div class="form-group">
+                                      <div class=" row">
+                                      <label for="admi" class="col-lg-2">Admin Name</label>
+                                      <div class="col-lg-10 col-75 col-12">
+                                        <input type="text" id="admi" name="admi" onkeyup="validateadmin()">  
+                                      </div>
+                                      </div>
+                                      <small id="adminErrorMessag" class="form-text text-danger"></small>   
+                                      </div>
+                            <div class="form-group">
+                              <div class=" row">
+                              <label for="statu" class="col-lg-2">Status <sup class="text-danger">*</sup></label>
+                              <div class="col-lg-10 col-75 col-12">
+                                <select id="statu" name="statu"  >
+                                  <option value="">Select the status</option>
+                                  <option value="Upcoming">Upcoming</option>
+                                  <option value="Ongoing">Ongoing</option>
+                                  <option value="Completed">Completed</option>
+                                </select> 
+                                </div> 
+                                <small id="statusErrorMessag" class="form-text text-danger"></small>                       
+                              </div>
+                          </div>
+  <div class="d-flex justify-content-center">
+                              <button type="button" class="btn btn-success mt-2 " id="userModalSaveBtn" onclick="debugs()">Save User</button>
+                              </div>
+                          </form>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+
+
+              <div class="modal fade" id="delete" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h1 class="modal-title fs-5" id="exampleModalLabel">Delete  User</h1>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                      Do you want to delete the following Batch? <span id="user_name_delete" class="fw-bold"></span> 
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-success " data-bs-dismiss="modal" id="yes">Yes</button>
+                      <button type="button" class="btn btn-danger"data-bs-dismiss="modal">No</button>
+                    </div>
+                  </div>
+                </div>
+              </div> 
+
+
+
+
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        
+            <script src="https://cdn.datatables.net/1.13.7/js/jquery.dataTables.min.js"></script>
+            <script src="https://cdn.datatables.net/buttons/2.4.2/js/dataTables.buttons.min.js"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/pdfmake.min.js"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/vfs_fonts.js"></script>
+            <script src="https://cdn.datatables.net/buttons/2.4.2/js/buttons.html5.min.js"></script>
+            <script
+              src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+              integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+              crossorigin="anonymous"
+            ></script>
+            <script
+              src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+              integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+              crossorigin="anonymous"
+            ></script>
+        
+        <!-- Other scripts -->
+        
+            <script>
+              $(function () {
+                $("#myTable").DataTable
+                ({
+                  dom: "Bfrtip",
+                  buttons: ["copyHtml5", "excelHtml5", "csvHtml5", "pdfHtml5"],
+                });
+              });
+            </script>         
+<script>
+
+
+// edit script start
+    function validateUserName()
+{
+  var isValid = true;
+  var userNameInput = document.getElementById("userName").value;
+  var userNameErrorMessage = document.getElementById("userNameErrorMessage");
+  userNameErrorMessage.innerHTML="";
+  if(userNameInput.trim()==='')
+  {
+    userNameErrorMessage.innerHTML="Batch Name is required";
+    return false;
+  }
+  else
+  {
+    return true
+  }
+
+}
+
+function validateCourse()
+{
+  var isValid=true;
+  var courseInput = document.getElementById("course").value;
+  var courseErrorMessage = document.getElementById("courseErrorMessage");
+  courseErrorMessage.innerHTML= "";
+  if (courseInput.trim() ==='') {
+    courseErrorMessage.innerHTML= "Course Name is required";
+    return false;
+  } 
+  else
+  {
+    return true
+  }
+}
+function validateinstr()
+{
+  var isValid=true;
+  var instrInput = document.getElementById("instr").value;
+  var instrErrorMessage = document.getElementById("instrErrorMessage");
+  instrErrorMessage.innerHTML= "";
+  if(!/^[a-zA-Z ]+$/.test(instrInput)){
+    instrErrorMessage.innerHTML="Instructor Name is invalid";
+    return false;
+  }
+  else
+  {
+    instrErrorMessage.innerHTML= "";
+    return true
+  }
+}
+function validateadmin()
+{
+  var isValid=true;
+  var adminInput = document.getElementById("admin").value;
+  var adminErrorMessage = document.getElementById("instrErrorMessage");
+  adminErrorMessage.innerHTML= "";
+  if(!/^[a-zA-Z ]+$/.test(adminInput)){
+    adminErrorMessage.innerHTML="Admin Name is invalid";
+    return false;
+  }
+  else
+  {
+    return true
+  }
+}
+function validatestatus() {
+  console.log("hi")
+  var isValid = true;
+  var batchSelect = document.getElementById("status").value;
+ var batchErrorMessage = document.getElementById("statusErrorMessage");
+ batchErrorMessage.innerHTML="";
+ if(batchSelect.trim()==='')
+ {
+  batchErrorMessage.innerHTML="status must be select";
+ return false;
+ }
+ else
+  {
+    return true
+  }
+}
+
+function debug()
+{
+var r1=validateUserName()
+var r2=validateCourse()
+var r5=validatestatus()
+if(r1&&r2&&r5)
+{
+    // $('#userModal').modal('show');
+    document.getElementById('userForm').submit()
+
+}
+}
+
+
+var batch_edit = document.querySelectorAll('.edit-button');
+        batch_edit.forEach(btn => {
+            btn.addEventListener('click',()=>{
+                let parent = btn.parentNode.parentNode;
+                let user_name= parent.querySelector('td:nth-child(3)').textContent;
+                let user_course= parent.querySelector('td:nth-child(4)').textContent;
+                let user_instr= parent.querySelector('td:nth-child(5)').textContent;
+                let user_admin =parent.querySelector('td:nth-child(6)').textContent;
+                let user_status =parent.querySelector('td:nth-child(7)').textContent;
+
+                populatebatchModal(user_name,user_course,user_instr,user_admin,user_status);
+                
+            });
+        });
+       
+        function populatebatchModal(user_name,user_course,user_instr,user_admin,user_status){
+            document.getElementById('userName').value = user_name;
+            document.getElementById('course').value =user_course;
+            document.getElementById('instr').value = user_instr;
+            document.getElementById('admin').value=user_admin;
+            document.getElementById('status').value=user_status;
+        
+            $('#userModal').modal('show');
+}
+
+// edit script end
+
+
+// add script start
+function validateUserNam()
+{
+  var isValid = true;
+  var userNameInput = document.getElementById("userNam").value;
+  var userNameErrorMessage = document.getElementById("userNameErrorMessag");
+  userNameErrorMessage.innerHTML="";
+  if(userNameInput.trim()==='')
+  {
+    userNameErrorMessage.innerHTML="Batch Name is required";
+    return false;
+  }
+  else
+  {
+    return true
+  }
+
+}
+
+function validateCours()
+{
+  var isValid=true;
+  var courseInput = document.getElementById("cours").value;
+  var courseErrorMessage = document.getElementById("courseErrorMessag");
+  courseErrorMessage.innerHTML= "";
+  if (courseInput.trim() ==='') {
+    courseErrorMessage.innerHTML= "Course Name is required";
+    return false;
+  } 
+  else
+  {
+    return true
+  }
+}
+function validateinst()
+{
+  var isValid=true;
+  var instrInput = document.getElementById("inst").value;
+  var instrErrorMessage = document.getElementById("instrErrorMessag");
+  instrErrorMessage.innerHTML= "";
+  if(!/^[a-zA-Z ]+$/.test(instrInput)){
+    instrErrorMessage.innerHTML="Instructor Name is invalid";
+    return false;
+  }
+  else
+  {
+    instrErrorMessage.innerHTML= "";
+    return true
+  }
+}
+function validateadmi()
+{
+  var isValid=true;
+  var adminInput = document.getElementById("admi").value;
+  var adminErrorMessage = document.getElementById("instrErrorMessag");
+  adminErrorMessage.innerHTML= "";
+  if(!/^[a-zA-Z ]+$/.test(adminInput)){
+    adminErrorMessage.innerHTML="Admin Name is invalid";
+    return false;
+  }
+  else
+  {
+    return true
+  }
+}
+function validatestatu() {
+  console.log("hi")
+  var isValid = true;
+  var batchSelect = document.getElementById("statu").value;
+ var batchErrorMessage = document.getElementById("statusErrorMessag");
+ batchErrorMessage.innerHTML="";
+ if(batchSelect.trim()==='')
+ {
+  batchErrorMessage.innerHTML="status must be select";
+ return false;
+ }
+ else
+  {
+    return true
+  }
+}
+
+
+function debugs()
+{
+var r1=validateUserNam()
+var r2=validateCours()
+var r5=validatestatu()
+if(r1&&r2&&r5)
+{
+    // $('#userModal').modal('show');
+    document.getElementById('userForm').submit()
+}
+}
+
+// add script end
+
+// delete row start
+
+var user_delete = document.querySelectorAll('.delete-button');
+      user_delete.forEach(btn => {
+          btn.addEventListener('click',()=>{
+            console.log("parent")
+            $('#delete').modal('show')
+              let parent = btn.parentNode.parentNode;
+              let user_name= parent.querySelector('td:nth-child(3)').textContent;
+    document.getElementById("user_name_delete").innerHTML=user_name;
+  console.log('helo')
+    });
+      });
+function deleteRow(button) {   
+
+      var row = button.parentNode.parentNode;
+      var val=document.getElementById("yes")
+      val.addEventListener('click',function()
+      {
+        var tbody = document.getElementById("myTable").getElementsByTagName('tbody')[0];
+        row.parentNode.removeChild(row);
+        renumberRows(tbody);
+      });
+
+} 
+
+function renumberRows(tbody) {
+  // Get all rows in the tbody
+  var rows = tbody.getElementsByTagName('tr');
+
+  // Update the S.No for each row
+  for (var i = 0; i < rows.length; i++) {
+      rows[i].getElementsByTagName('td')[0].textContent = i + 1;
+  }
+}
+// delete row end
+
+
+
+
+
+</script>
+<script src="../assets/script/script.js"></script>
+        </body>
+        </html>

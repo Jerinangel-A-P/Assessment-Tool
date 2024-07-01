@@ -1,0 +1,25 @@
+
+
+.index
+{
+//   margin: auto;
+  width: 50%;
+}
+@media (max-width:1024px)
+{
+    .index
+    {
+        .indeximage
+        {
+            display: none;
+        }
+    }
+   
+}
+@media screen and (max-width: 560px)
+{
+.index
+{
+   width: 100%;
+}
+}

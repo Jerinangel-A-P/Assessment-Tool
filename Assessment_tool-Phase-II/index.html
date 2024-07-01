@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Dashboard</title>
+    <!-- style sheet link -->
+    <link rel="stylesheet" href="/assets/css/style.css"/>
+    <!-- fontawesome link -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.2/css/fontawesome.min.css" integrity="sha384-BY+fdrpOd3gfeRvTSMT+VUZmA728cfF9Z2G42xpaRkUGu2i3DyzpTURDo5A6CaLK" crossorigin="anonymous">
+    <link rel="stylesheet" hrefh="ttps://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- googlefont link -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Nunito+Sans:opsz@6..12&family=Saira&family=Tektur&display=swap" rel="stylesheet">
+    <!-- bootstrap link -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+</head>
+
+
+<body style="height: 100vh;" class="d-flex justify-content-center align-items-center" >
+
+
+
+    
+<div class="index d-flex m-3 flex-column justify-content-center align-items-center   p-4 rounded-3 login" style="background-color:#ADE8F4 ;  box-shadow: 0px 8px 16px 0px rgba(15, 15, 15, 0.2); border:2px solid  #03045E;">
+    <div class="d-flex column-gap-2 align-self-start">
+        <img class="" src="/assets/static/images/logo.png" height="40">
+        <h5 class="align-self-center fw-bold mb-0 mb-lg-0 mb-sm-3">Skill Scope</h5>
+        </div>
+<div class="d-flex column-gap-4">       
+<div class="indeximage">   
+<img class="" src="/assets/static/images/Mobile login-rafiki.png" height="350">
+</div>
+<div>
+
+    <!-- login section start -->
+<div class=" " >
+    <h5 class="fw-bolder fs-3 h3 text-center mb-2">Log In</h5>
+    <small id="usernameErrorMessage" class="text-danger text-center mt-1"></small>
+<form >
+    <div class="mb-3 row">
+        <label for="username" class="col-sm-4 col-form-label">User Id <sup class="text-danger">*</sup></label>
+        <div class=" col-75">
+          <input type="text" class="form-control" id="username" >
+        </div>
+      </div>
+      <div class="mb-3 row">
+        <label for="password" class="col-form-label">Password <sup class="text-danger">*</sup></label>
+        <div class="col-75">
+          <input type="password" class="form-control" id="password" >
+        </div>
+      </div>
+      <div class="mb-3 row">
+        <label for="option" class="col-form-label">User Role <sup class="text-danger">*</sup></label>
+        <div class=" col-75">
+            <select id="option" name="option" >
+                <option value="" selected>Select User Role</option>
+                <option value="admin">Admin</option>
+                <option value="student">Student</option>
+                <option value="instructor">Instructor</option>
+            </select>           </div>
+      </div>
+     
+   
+        <div class="mt-4 d-flex justify-content-between flex-wrap row-gap-3">
+            <button type="button" class="btn "style="background-color:#33c7e4; color:#03045E;" data-bs-toggle="modal" data-bs-target="#exampleModal">Show Credentials</button>
+            <button id="sub" type= "button"class="btn text-center" onclick="validateForm()" style="background-color:#33c7e4; color:#03045E;">
+Log In
+            </button>
+        </div>
+</form>
+</div>
+<!-- login section end -->
+</div>
+</div>
+
+<!-- Credentials start-->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Login Credentials</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div>
+            <h5>Student</h5>
+            <p  class="mb-0">Username:St101</p>
+            <p  class="mb-0">Password:Student@2003</p>
+          </div>
+          <div class="mt-3">
+            <h5>Instructor</h5>
+            <p  class="mb-0">Username:In101</p>
+            <p  class="mb-0">Password:Instructor@2003</p>
+          </div>
+          <div class="mt-3">
+            <h5>Admin</h5>
+            <p  class="mb-0">Username:Ad101</p>
+            <p  class="mb-0">Password:Admin@2003</p>
+          </div>
+        </div>
+        <!-- <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Save changes</button>
+        </div> -->
+      </div>
+    </div>
+  </div>
+<!-- Credentials end-->
+<!-- script for validation  start-->
+<script>
+
+
+function validateForm() {
+    var username = document.getElementById('username').value;
+    var pass = document.getElementById('password').value;
+    var option = document.getElementById('option').value;
+    var message = document.getElementById('usernameErrorMessage');
+    message.innerHTML = '';
+
+    if (username === '' || pass === '' || option === '') {
+        message.innerHTML = 'All fields are required';
+    }
+
+   else if ((username === 'St101' || username === 'In101' || username === 'Ad101') &&
+        (pass === 'Student@2003' || pass === 'Instructor@2003' || pass === 'Admin@2003')) {
+
+        if ((username === 'St101' && pass === 'Student@2003' && option === 'student') ||
+            (username === 'In101' && pass === 'Instructor@2003' && option === 'instructor') ||
+            (username === 'Ad101' && pass === 'Admin@2003' && option === 'admin')) {
+
+            switch (option) {
+                case 'student':
+                    window.location.href = '/student_module/dashboard.html';
+                    break;
+                case 'instructor':
+                    window.location.href = '/instructor_module/instructor.html';
+                    break;
+                case 'admin':
+                    window.location.href = '/admin_module/admin.html';
+                    break;
+                default:
+                    message.innerHTML = 'Invalid user role';
+                   
+            }
+
+        } else {
+            message.innerHTML = 'Invalid combination of username, password, and user role';
+          
+        }
+
+    } else {
+        message.innerHTML = 'Invalid username or password';
+        
+    }
+
+
+}
+
+</script>
+   
+<!-- script for validation  end-->
+<script src="../assets/script/script.js"></script>
+</body>
+</html>

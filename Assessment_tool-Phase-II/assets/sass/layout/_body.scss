@@ -1,0 +1,17 @@
+.main-body 
+{
+    margin-left:200px;margin-top: 90px;
+    padding: 20px;
+}
+.progress
+{
+    height: 5px !important;
+}
+@media (max-width:850px)
+{
+   .main-body
+   {
+    margin-top: 80px;
+    margin-left: 0px;
+   }
+}

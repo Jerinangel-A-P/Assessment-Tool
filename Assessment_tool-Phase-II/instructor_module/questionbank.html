@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Dashboard</title>
+    
+    <!-- fontawesome link -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.2/css/fontawesome.min.css" integrity="sha384-BY+fdrpOd3gfeRvTSMT+VUZmA728cfF9Z2G42xpaRkUGu2i3DyzpTURDo5A6CaLK" crossorigin="anonymous">
+    <link rel="stylesheet" hrefh="ttps://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- googlefont link -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Nunito+Sans:opsz@6..12&family=Saira&family=Tektur&display=swap" rel="stylesheet">
+    <!-- bootstrap link -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <!-- style sheet link -->
+    <link rel="stylesheet" href="/assets/css/style.css"/>
+
+    <script src="https://cdn.ckeditor.com/ckeditor5/40.0.0/classic/ckeditor.js"></script>
+
+    <!-- data table link -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.datatables.net/1.13.7/css/jquery.dataTables.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.datatables.net/buttons/2.4.2/css/buttons.dataTables.min.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+</head>
+
+<body>
+  <!-- Nav bar start -->
+    <header class="col" >
+        <nav class="navbar navbar-expand-lg p-3 ">
+            <div class="container-fluid flex-nowrap">
+                 <!-- search bar start -->
+                 <form action="" class=""  >
+                    <div class=" rounded rounded-pill shadow-sm mb-0 search">
+                        <div class="input-group ">
+                          <input type="search" placeholder="Search" aria-describedby="button-addon1" class="form-control py-1 border-0 fs-6">
+                          <div class="input-group-append">
+                            <button id="button-addon1" type="submit" class="btn btn-link text-primary "><img  src="/assets/static/images/search.png" height="25"></button>
+                          </div>
+                        </div>
+                      </div>
+                    
+                </form>
+                 <!-- search bar end -->
+
+                 <!-- navbar items start -->
+                 <div class="collapse navbar-collapse float-end " id="navbarScroll">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                      <!-- notification start -->
+                        <li class="nav-item">
+                            <a class="py-0 nav-link active" aria-current="page" href="#"><img src="../assets/static/images/bell.png" height="40"></a>
+                        </li>
+                        <!-- notification end -->
+
+                        <!-- profile start -->
+                        <li class="m-auto">
+                           <div class="px-2 py-1 rounded-pill d-flex justify-content-center drop-division  ">
+                                <img class="  align-self-center"   src="../assets/static/images/profile2.png" height="25">
+                                <div class="nav-item dropdown ">
+                                  <a class="nav-link dropdown-toggle py-1" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                     Aruna
+                                  </a>
+                                  <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#">Profile</a></li>
+                                    <li><a class="dropdown-item" href="#">Log Out</a></li>
+                                  </ul>
+                                </div>
+                           </div>
+                        </li>
+                        <!-- profile end -->
+
+                        </ul>
+                 </div>
+                  <!-- navbar items end -->
+                  
+            </div>
+        </nav>
+    </header>
+    <!-- navbar end -->
+
+    <!--responsive sidebar start  -->
+    <div id="mySidebar" class="sidebar">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+      <div>
+        <a href="instructor.html"><span>Dashboard</span> <img src="../assets/static/images/left4.png"></a>
+      </div>
+      <div>
+        <a href="Assessment.html"><span>Assessment</span> <img src="../assets/static/images/left4.png"></a>
+      </div>
+      <div>
+        <a href="questionbank-main.html"><span>Question Bank</span><img src="../assets/static/images/left4.png"></a>
+      </div>
+      <div>
+          <a href="batch-main.html"><span>Batch</span><img src="../assets/static/images/left4.png"></a>
+        </div>
+      <div>
+        <a href="#"><span>Profile</span><img src="../assets/static/images/left4.png"></a>
+      </div>
+      <div>
+        <a href="/index.html"><span>Log Out</span></a>
+      </div>
+ </div>
+    
+    <div id="main">
+      <button class="navbar-toggler" onclick="openNav()">☰</button>
+    </div>
+  <!-- responsive sidebar end -->
+
+  <!-- sidebar start -->
+    <div class="side-menu">
+        <div  class="user"> <img src="../assets/static/images/logo.png"><h3 class="fs-5">INSTRUCTOR</h3></div> 
+        <div class="items">
+            <div class="items_box py-2 px-3 fs-6"> <a href="../instructor_module/instructor.html"><span>Dashboard</span> <img  src="../assets/static/images/left4.png"></a></div>
+            <div  class="items_box py-2 px-3 fs-6 unique"> <a href="../instructor_module/Assessment.html"><span>Assessment</span> <img src="../assets/static/images/left.png"></a></div>
+            <div  class="items_box py-2 px-3 fs-6"> <a href="questionbank-main.html"></i><span>Question Bank</span><img  src="../assets/static/images/left4.png"></a></a></div>
+            <div  class="items_box py-2 px-3 fs-6  "> <a href="../instructor_module/batch-main.html"></i><span>Batch</span><img  src="../assets/static/images/left4.png"></a></a></div>
+         </div>
+    </div>
+  <!-- sidebar end -->
+  <section id="instructor_dashboard"class="main-body">
+    <div class="container ">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a href="../instructor_module/Assessment.html">Assessment</a></li>
+              <li class="breadcrumb-item"><a href="../instructor_module/assessment-form.html">Assessment Details</a></li>
+              <li class="breadcrumb-item active" aria-current="page">Question Bank</li>
+            </ol>
+          </nav>
+
+          <div >
+            <div class="d-flex justify-content-between">
+                <h2 class="h4 fw-bolder p">Question Bank</h2>
+                <a href="../instructor_module/question.html"><button class="btn" style="background-color: #CAF0F8; color:#03045E">Create Question</button></a>
+            </div>
+          </div>
+
+          <div class="container container-table p-0 p-3 mt-1" style="background-color: rgb(255, 251, 251);
+          box-shadow: rgba(0, 0, 0, 0.2) 0px 7px 29px 0px;  margin-top: 20px ;height:62vh; overflow-y: scroll;">
+            <div class="row">
+              <div class="col p-0 ">
+                <table class="table table-responsive mt-3"  style="background-color: #CAF0F8;" id="myTable">
+                  <thead style="z-index: 2;">
+                    <tr>
+                        <th>S.No</th>
+                        <th>Questions</th>
+                        <th></th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Which of the following is a data type in C?</td>
+                        <td><form>
+                            <input type="checkbox"  name="item" class="option-input checkbox"/>  
+                        </form></td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>What is the symbol used for the equality comparison in C?</td>
+                        <td><form>
+                            <input type="checkbox"  name="item" class="option-input checkbox"  />  
+                        </form></td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Which of the following is a data type in C?</td>
+                        <td><form>
+                            <input type="checkbox"  name="item" class="option-input checkbox"  />  
+                        </form></td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Which of the following statements is used to allocate memory dynamically in C?</td>
+                        <td><form>
+                            <input type="checkbox"  name="item" class="option-input checkbox" />  
+                        </form></td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>What is the purpose of the "break" statement in a loop in C?</td>
+                        <td><form>
+                            <input type="checkbox"  name="item" class="option-input checkbox"  />  
+                        </form></td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>Which of the following is not a valid keyword in C?</td>
+                        <td><form>
+                            <input type="checkbox"   name="item" class="option-input checkbox"  />  
+                        </form></td>
+                    </tr>
+                    <tr>
+                        <td>6</td>
+                        <td>What is the purpose of the "sizeof" operator in C?</td>
+                        <td><form>
+                            <input type="checkbox"  name="item" class="option-input checkbox"  />  
+                        </form></td>
+                    </tr>
+                    <tr>
+                        <td>7</td>
+                        <td>What is the format specifier used to print an integer in hexadecimal format in C?</td>
+                        <td><form>
+                            <input type="checkbox"  name="item" class="option-input checkbox" />  
+                        </form></td>
+                    </tr>
+                    <tr>
+                        <td>8</td>
+                        <td>Which C library function is used to input a string from the user??</td>
+                        <td><form>
+                            <input type="checkbox"   name="item"class="option-input checkbox"  />  
+                        </form></td>
+                    </tr>
+                    <tr>
+                        <td>9</td>
+                        <td>What is the format specifier used to print an integer in hexadecimal format in C?</td>
+                        <td><form>
+                            <input type="checkbox"  name="item" class="option-input checkbox"/>  
+                        </form></td>
+                    </tr>
+                    <tr>
+                        <td>10</td>
+                        <td>What does the "void" data type represent in C?</td>
+                        <td><form>
+                            <input type="checkbox"  name="item" class="option-input checkbox"  />  
+                        </form></td>
+                    </tr>
+                  </tbody>
+                </table>
+
+                
+
+              </div>
+            </div>
+          </div>
+
+
+          <div class="mt-3 d-flex justify-content-end">
+            <button class="btn btn-success" id="proceedBtn">Proceed</button>
+
+                <!-- Bootstrap Modal -->
+                <div class="modal" id="myModal">
+                  <div class="modal-dialog  modal-dialog-centered">
+                    <div class="modal-content">
+                
+                      <!-- Modal Header -->
+                      <div class="modal-header">
+                        <!-- <h4 class="modal-title"></h4> -->
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        <!-- <button type="button" class="close" data-dismiss="modal">&times;</button> -->
+                      </div>
+                
+                      <!-- Modal Body -->
+                      <div class="modal-body">
+                        <p id="selectedItems" class="text-center"> <img src="../assets/static/images/tick.png" height="33"> Assessment Created Successfully</p>
+                      </div>
+                  
+                      <!-- Modal Footer -->
+                      <div class="modal-footer">
+                       <a href="../instructor_module/Assessment.html"> <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button></a>
+                      </div>
+          </div>
+    </div>
+    </div>
+    <div class="modal" id="Modal">
+      <div class="modal-dialog  modal-dialog-centered">
+        <div class="modal-content">
+    
+          <!-- Modal Header -->
+          <div class="modal-header">
+            <!-- <h4 class="modal-title"></h4> -->
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            <!-- <button type="button" class="close" data-dismiss="modal">&times;</button> -->
+          </div>
+    
+          <!-- Modal Body -->
+          <div class="modal-body align-items-center">
+            <p id="selectedItems" class="text-center " style="font-size: 18px;"><img src="../assets/static/images/cross.png" height="33" style="margin-top: -3px;">Please select atlest one item</p>
+          </div>
+    
+          <!-- Modal Footer -->
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          </div>
+</div>
+</div>
+</div>
+
+
+
+    </div>
+    </div>
+    </section>
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <script src="https://cdn.datatables.net/1.13.7/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/2.4.2/js/dataTables.buttons.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/pdfmake.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/vfs_fonts.js"></script>
+    <script src="https://cdn.datatables.net/buttons/2.4.2/js/buttons.html5.min.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+      integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+      crossorigin="anonymous"
+    ></script>
+
+<!-- Other scripts -->
+
+    <script>
+      $(function () {
+        $("#myTable").DataTable
+        ({
+          dom: "Bfrtip",
+          buttons: [  "pdfHtml5"],
+        });
+      });
+
+
+
+      document.addEventListener('DOMContentLoaded', function () {
+  var table = document.getElementById('myTable');
+  var proceedBtn = document.getElementById('proceedBtn');
+  var modal = document.getElementById('myModal');
+  var selectedItemsParagraph = document.getElementById('selectedItems');
+
+  proceedBtn.addEventListener('click', function () {
+    var checkboxes = table.querySelectorAll('tbody input[type="checkbox"]:checked');
+    var selectedItems = Array.from(checkboxes).map(function (checkbox) {
+      return checkbox.value;
+    });
+
+    if (selectedItems.length > 0) {
+//       var myModal = new bootstrap.Modal(document.getElementById('mymodal'));
+// myModal.show();
+     
+      $('#myModal').modal('show');
+
+    } else {
+       
+      // // Show the Bootstrap modal
+      $('#Modal').modal('show');
+    }
+  });
+});
+    </script>
+    <script src="../assets/script/script.js"></script>
+</body>
+</html>

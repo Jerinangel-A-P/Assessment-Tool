@@ -1,0 +1,19 @@
+.table
+{
+    --bs-table-color-state:#03045E; 
+    --bs-table-bg:#CAF0F8; 
+    font-size: 0.9rem;
+    thead {
+        background-color:#90E0EF; 
+        // position:sticky; 
+        // top:0; 
+    }
+}
+
+div.dt-buttons>.dt-button, div.dt-buttons>div.dt-button-split .dt-button {
+    background-color:#90E0EF !important;
+    color: #03045E !important;
+    font-weight: bold;
+    border: none;
+    border-radius:5px;
+}

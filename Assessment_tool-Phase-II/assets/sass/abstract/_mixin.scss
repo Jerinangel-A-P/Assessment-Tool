@@ -1,0 +1,40 @@
+// // Define mixin for image sizing
+// @mixin imageSize($width, $height: null) {
+//     width: $width;
+//     height: $height;
+//     object-fit: cover; 
+//   }
+  
+//   @for $i from 1 through 100 {
+//     .w#{$i} {
+//       @include imageSize(#{$i}%);
+//     }
+//   }
+  
+//   // Generate utility classes for height
+//   @for $i from 1 through 100 {
+//     .h#{$i} {
+//       @include imageSize(null, #{$i}%);
+//     }
+//   }
+  
+@mixin dropdown
+{
+    .dropdown
+    {
+        color: c.$h2;
+        .dropdown-toggle
+        {
+            color: c.$h2;
+        }
+        .dropdown-menu
+        {
+            background-color: c.$h9;
+        }
+        .dropdown-item
+        {
+            color: c.$h2;
+        }
+    }
+}
+  
